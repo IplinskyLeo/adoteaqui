@@ -12,70 +12,86 @@ a{
     font-family: sans-serif;
     transition: 0.5s;
     color: white;
+    padding-right: 10px;
+    letter-spacing: 2px;
     
 }
-a:hover{
-    opacity: 0.8;
-}
+
+
 li{
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
-
 /*
 #logo{
     font-size: 1.5rem;
     font-weight: bold;
 }
 */
+
 .logo{
+    position: absolute;
     padding: 8px;
     padding-top: 15px;
-    width: 100%;
+    max-width: 100%;
+    transition: 0.3s;
 }
-
+.logo:hover{
+    transform: scale(1.2)
+}
 #header{
     height: 70px;
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     font-weight: bold;
     background: #89cdfc;
     
 }
 
 #menu{
-    width: 50%;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 0.5rem;
+    list-style: none;
+    justify-content: flex-end;
 }
-#menu:hover{
-
+#liNav{
+    display: block;
 }
-#menu a:hover{
+#liNav:hover{
+        opacity: 0.8;
+        color: white;
+        transform: scale(1.2)
+}
+/* #menu a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5rem;
-    font-size: 1.1rem;
+    
     color: #0075cd;
-}
+} */
+
+/* ---------------Corpo--------------- */
 
 .flex-itens{
     padding: 50px;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: white;
     flex-wrap: wrap;
     object-fit: cover;
+}
+#back1{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #petimg{
     border-radius: 18px;
@@ -109,10 +125,10 @@ h2{
     color: #0075cd;
 }
 
-
+/* ---------------Rodapé--------------- */
 
 .contato{
-    padding: 30px;
+    padding: 10px;
     padding-top: 10px;
     font-family: sans-serif;
     font-weight: bold;
@@ -127,7 +143,7 @@ h2{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 18px;
+    padding: 10px;
     width: 100%;
     font-family: sans-serif;
 }
@@ -145,7 +161,10 @@ footer{
 #imgg{
     display: flex;
     justify-content: center;
-
+    transition: 0.2s;
+}
+#imgg:hover{
+    transform: scale(1.2);
 }
 .fim{
     display: flex;
@@ -155,8 +174,13 @@ footer{
     background-color: #89cdfc;
 }
 
+/* ---------------Media Querry--------------- */
+@media (max-width: 1000px) {
+    border: 10px;
+}
 
 @media (max-width: 700px) {
+    /* ---------------Corpo--------------- */
     .flex-itens{
         display: flex;
         flex-direction: column;
@@ -166,12 +190,13 @@ footer{
         padding-right: 5%;
     }
 
+/* ---------------Header--------------- */
     #header{
         height: 130px;
         padding: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         background: #89cdfc;
     }
     .logo{
@@ -179,15 +204,16 @@ footer{
         justify-content: center;
     }
     #nav{
-        background-color: white;
+        background-color: #a9dafd;
         width: 100%;
+        height: 40%;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
     #menu{
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
     }
     a{
         color: #0075cd;
